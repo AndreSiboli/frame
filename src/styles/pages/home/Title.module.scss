@@ -1,0 +1,39 @@
+@use "@/styles/_dirs/variables" as var;
+@use "@/styles/_dirs/mixins" as mix;
+
+.title {
+  position: fixed;
+  left: -30px;
+  bottom: -5px;
+  pointer-events: none;
+
+  @media (max-width: 678px) {
+    text-align: center;
+    left: 50%;
+    translate: -50% 0;
+  }
+
+  @media (max-height: 450px) {
+    display: none;
+  }
+
+  p {
+    display: block;
+    color: var.$neutral_color_700;
+    text-wrap: nowrap;
+
+    span {
+      display: inline-block;
+      font-size: calc(100vw / 3.6);
+      line-height: 0;
+      animation: ease-in letterMoving;
+      animation-timeline: scroll();
+    }
+  }
+}
+
+@keyframes letterMoving {
+  to {
+    transform: translateY(calc((1500 * var(--speed)) * 1px));
+  }
+}

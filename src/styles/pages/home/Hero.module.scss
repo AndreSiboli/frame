@@ -1,0 +1,95 @@
+@use "@/styles/_dirs/variables" as var;
+@use "@/styles/_dirs/mixins" as mix;
+
+.hero {
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  gap: 1em;
+
+  @media (max-width: 678px) {
+    width: 100%;
+  }
+
+  &_info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    max-width: 300px;
+    width: 100%;
+    text-transform: uppercase;
+
+    .info_title {
+      h1 {
+        font-size: 1.25em;
+        color: var.$neutral_color_700;
+      }
+    }
+
+    .info_text {
+      p {
+        color: var.$neutral_color_500;
+      }
+    }
+
+    .info_link {
+      a {
+        display: flex;
+        align-items: center;
+        gap: 0.5em;
+        padding: 0.75em 1em;
+        margin-top: 1em;
+        background: var.$neutral_color_300;
+        width: fit-content;
+        border-radius: 0.5em;
+        font-size: 0.95em;
+        color: var.$neutral_color_800;
+        transition: background 0.25s ease-in-out, color 0.25s ease-in-out,
+          gap 0.25s ease-in-out;
+
+        svg {
+          font-size: 1.15em;
+        }
+
+        @include mix.OnlyPc {
+          &:hover {
+            background: #000;
+            color: #fff;
+            gap: 1em;
+          }
+        }
+      }
+    }
+  }
+
+  &_scroll {
+    transform: rotate(90deg) translateX(10px);
+    width: fit-content;
+    height: fit-content;
+
+    @media (max-width: 678px) {
+      align-self: center;
+    }
+
+    @media (max-width: 420px) {
+      display: none;
+    }
+
+    &:after {
+      content: "";
+      width: 35px;
+      height: 1px;
+      background: #000;
+      right: -45px;
+      top: 50%;
+      transform: translateY(-50%);
+      position: absolute;
+    }
+
+    p {
+      display: block;
+      position: relative;
+      color: #000;
+    }
+  }
+}

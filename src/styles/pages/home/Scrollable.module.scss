@@ -1,0 +1,64 @@
+@use "@/styles/_dirs/variables" as var;
+@use "@/styles/_dirs/mixins" as mix;
+
+.slide {
+  height: 300dvh;
+  position: relative;
+  padding: 0 2em;
+  overflow: clip;
+
+  @media (max-width: 678px) {
+    height: 100%;
+  }
+
+  &_container {
+    display: flex;
+    align-items: center;
+    min-height: 100dvh;
+    position: sticky;
+    top: 0;
+    padding: 5em 0;
+    width: 100%;
+
+    @media (min-width: 678px) {
+      animation: scroll forwards;
+      animation-timing-function: ease-in;
+
+      animation-timeline: scroll();
+    }
+
+    @media (max-width: 678px) {
+      flex-direction: column;
+      align-items: flex-start;
+      position: relative;
+      padding: 7em 0;
+    }
+  }
+
+  &_wrapper {
+    display: flex;
+    gap: 1em;
+
+    @media (max-width: 678px) {
+      flex-direction: column;
+      width: 100%;
+      gap: 5em;
+    }
+
+    .wrapper_portraits {
+      display: flex;
+      align-items: center;
+      gap: 2em;
+
+      @media (max-width: 678px) {
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(var(--final-translate-x));
+  }
+}

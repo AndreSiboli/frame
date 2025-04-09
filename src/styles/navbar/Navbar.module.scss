@@ -1,0 +1,30 @@
+@use "@/styles/_dirs/variables" as var;
+@use "@/styles/_dirs/mixins" as mix;
+
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 1.5em 2em;
+  z-index: 99;
+  background: #f5f5f5;
+
+  &_container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 2em;
+  }
+
+  &_logo {
+    h1 {
+      opacity: 1;
+    }
+  }
+
+  &_social {
+    svg {
+      color: #000 !important;
+    }
+  }
+}
