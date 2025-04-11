@@ -3,6 +3,7 @@ import styles from "@/styles/navbar/Navbar.module.scss";
 import Container from "@/components/layout/Container";
 import SocialMedia from "@/components/links/SocialMedia";
 import Logo from "../layout/Logo";
+import DarkMode from "./DarkMode";
 
 export default function Navbar() {
   return (
@@ -14,6 +15,7 @@ export default function Navbar() {
           </div>
           <div className={styles.header_social}>
             <SocialMedia />
+            <DarkMode/>
           </div>
         </div>
       </Container>

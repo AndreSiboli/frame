@@ -19,7 +19,7 @@
 
   p {
     display: block;
-    color: var.$neutral_color_700;
+    color: var(--text-normal);
     text-wrap: nowrap;
 
     span {

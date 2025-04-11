@@ -7,7 +7,7 @@
   width: 100%;
   padding: 1.5em 2em;
   z-index: 99;
-  background: #f5f5f5;
+  background: var(--bg-main);
 
   &_container {
     display: flex;
@@ -23,8 +23,12 @@
   }
 
   &_social {
+    display: flex;
+    align-items: center;
+    gap: 1em;
+
     svg {
-      color: #000 !important;
+      color: var(--text-normal) !important;
     }
   }
 }

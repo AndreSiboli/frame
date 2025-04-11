@@ -4,7 +4,7 @@
 .show {
   width: 425px;
   aspect-ratio: 1/1;
-  border: 1px solid var.$neutral_color_400;
+  border: 1px solid var(--show-border-color);
 
   @media (max-width: 678px) {
     width: 100%;
@@ -19,28 +19,31 @@
     height: 100%;
     font-size: 1.6em;
     text-transform: uppercase;
-    color: var.$neutral_color_700;
-    transition: background 0.25s ease-in-out, color 0.25s ease-in-out;
+    transition: background 0.25s ease-in;
 
     span {
-      transition: color 0.25s ease-in-out;
+      transition: color 0.25s ease-in;
 
       &:first-child {
+        color: var(--text-normal);
         font-weight: bold;
       }
 
       &:last-child {
-        color: var.$neutral_color_500;
+        color: var(--text-light);
       }
     }
 
     @include mix.OnlyPc {
       &:hover {
-        background: var.$neutral_color_700;
-        color: #fff;
+        background: var(--show-bg-hover);
+
+        span:first-child {
+          color: var(--show-text-strong-hover);
+        }
 
         span:last-child {
-          color: var.$neutral_color_200;
+          color: var(--show-text-light-hover);
         }
       }
     }

@@ -1,0 +1,28 @@
+//Note: Let this inside css modules makes the build going wrong
+
+//ShowAll
+
+[data-theme="light"] {
+  --show-bg-hover: #2c2c2c;
+  --show-text-light-hover: #cfcfcf;
+  --show-text-normal-hover: #d3d3d3;
+  --show-text-strong-hover: #fff;
+  --show-border-color: #a9a9a9;
+}
+
+[data-theme="dark"] {
+  --show-bg-hover: #f5f5f5;
+  --show-text-light-hover: #4d4d4d;
+  --show-text-normal-hover: #2c2c2c;
+  --show-text-strong-hover: #000;
+  --show-border-color: #cdcdcd;
+}
+
+//Hero
+
+:root {
+  --hero-bg-button: #d3d3d3;
+  --hero-text-button-normal: #2c2c2c;
+  --hero-bg-hover: #2c2c2c;
+  --hero-text-normal-hover: #d3d3d3;
+}

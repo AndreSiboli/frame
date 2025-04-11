@@ -1,3 +1,4 @@
+import "@/styles/pages/globals-variables.scss";
 import styles from "@/styles/pages/home/ShowAll.module.scss";
 import Link from "next/link";
 

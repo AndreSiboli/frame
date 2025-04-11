@@ -22,13 +22,13 @@
     .info_title {
       h1 {
         font-size: 1.25em;
-        color: var.$neutral_color_700;
+        color: var(--hero-text-normal);
       }
     }
 
     .info_text {
       p {
-        color: var.$neutral_color_500;
+        color: var(--hero-text-light);
       }
     }
 
@@ -39,23 +39,28 @@
         gap: 0.5em;
         padding: 0.75em 1em;
         margin-top: 1em;
-        background: var.$neutral_color_300;
         width: fit-content;
         border-radius: 0.5em;
         font-size: 0.95em;
-        color: var.$neutral_color_800;
+        background: var(--hero-bg-button);
+        color: var(--hero-text-button-normal);
         transition: background 0.25s ease-in-out, color 0.25s ease-in-out,
           gap 0.25s ease-in-out;
 
         svg {
           font-size: 1.15em;
+          color: var(--hero-text-button-normal);
         }
 
         @include mix.OnlyPc {
           &:hover {
-            background: #000;
-            color: #fff;
+            background: var(--hero-bg-hover);
+            color: var(--hero-text-normal-hover);
             gap: 1em;
+
+            svg {
+              color: var(--hero-text-normal-hover);
+            }
           }
         }
       }
@@ -79,7 +84,7 @@
       content: "";
       width: 35px;
       height: 1px;
-      background: #000;
+      background: var(--text-normal);
       right: -45px;
       top: 50%;
       transform: translateY(-50%);
@@ -89,7 +94,7 @@
     p {
       display: block;
       position: relative;
-      color: #000;
+      color: var(--text-normal);
     }
   }
 }
