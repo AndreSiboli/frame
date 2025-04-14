@@ -19,7 +19,7 @@ export default function DarkMode() {
 
   return (
     <div className={styles.mode}>
-      <button className={styles.mode_wrapper} onClick={toogleTheme}>
+      <button className={styles.mode_wrapper} onClick={toogleTheme} aria-label="Toogle style mode">
         <span
           className={`${styles.light} ${theme === "light" && styles.active}`}
         >
